@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+.nav-class-ui {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-class {
+    float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-class a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-class a:hover:not(.active) {
+    background-color: #111;
 }
 
-.App-link {
-  color: #61dafb;
+.active {
+    background-color: #04AA6D;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-table {
+    min-width: 900px;
+}
+
+.custom-table thead tr,
+.custom-table thead th {
+    border-top: none;
+    font-size: 24px;
+    border-bottom: none !important;
+}
+
+.custom-table tbody th,
+.custom-table tbody td {
+    color: #777;
+    font-weight: 400;
+    padding-bottom: 20px;
+    line-height: 2;
+    font-size: 20px;
+    padding-top: 20px;
+    font-weight: 300;
+}
+
+.custom-table tbody th small,
+.custom-table tbody td small {
+    color: #b3b3b3;
+    font-weight: 300;
+}
+
+.custom-table tbody tr th,
+.custom-table tbody tr td {
+    position: relative;
+    line-height: 2;
+    font-size: 20px;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.custom-table tbody tr th:before,
+.custom-table tbody tr th:after,
+.custom-table tbody tr td:before,
+.custom-table tbody tr td:after {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 1px;
+    background: #bfbfbf;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.custom-table tbody tr th:before,
+.custom-table tbody tr td:before {
+    top: -1px;
+}
+
+.custom-table tbody tr th:after,
+.custom-table tbody tr td:after {
+    bottom: -1px;
+}
+
+.custom-table tbody tr:hover th,
+.custom-table tbody tr:hover td {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.custom-table tbody tr:hover th:before,
+.custom-table tbody tr:hover th:after,
+.custom-table tbody tr:hover td:before,
+.custom-table tbody tr:hover td:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom-table tbody tr.active th,
+.custom-table tbody tr.active td {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.custom-table tbody tr.active th:before,
+.custom-table tbody tr.active th:after,
+.custom-table tbody tr.active td:before,
+.custom-table tbody tr.active td:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container_timein {
+    height: 500px;
+    position: relative;
+}
+
+.custom_vertical_align {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.dash-table {
+    margin-top: 12px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+/* td,
+th {
+    
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+} */
+
+.total-time {
+    text-align: end;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.tab-header {
+    @apply h-12 text-left px-[12px];
 }

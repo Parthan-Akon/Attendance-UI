@@ -1,0 +1,18 @@
+
+use effect(() => {}) runs everytime when the state changes
+
+use effect(() => {},[]) runs only one time, since [] is used for declaring dependencies.
+currently dependency array is empty. So it will run only once
+
+use effect (() => {}, [count]) adding a dependency, will look for
+state change in count and run accordingly.
+
+
+useEffect(() => {
+
+    return () => {
+        alert('Good bye component!')
+    }
+})
+A function can be returned when the component is destroyed or
+unmounted

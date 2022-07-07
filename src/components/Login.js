@@ -13,6 +13,7 @@ function Login() {
     function updateInputValue(event) {
         setUsername(event.target.value);
         console.log(username);
+        console.log("here");
     }
 
     const updatePassword = (event) => {
